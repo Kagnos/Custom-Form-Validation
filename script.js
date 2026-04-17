@@ -1,3 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("Page loaded and script running!");
+const form = document.querySelector("#form");
+
+form.addEventListener("submit", () => {
+    console.log("high five!")
 });
