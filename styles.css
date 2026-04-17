@@ -1,3 +1,28 @@
 body {
-    background-color: hotpink;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+label, input, button {
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-button-group {
+    display: flex;
+    justify-content: space-between;
 }
