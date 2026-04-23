@@ -26,3 +26,36 @@ label, input, button {
     display: flex;
     justify-content: space-between;
 }
+
+.valid {
+    background-color: #b6ffb6;
+}
+
+.invalid {
+    background-color: #ffb6b6;
+}
+
+.error {
+    position: absolute;
+    color: red;
+}
+
+#email-error {
+    top: 150px;
+}
+
+#country-error {
+    top: 245px;
+}
+
+#postal-error {
+    top: 340px;
+}
+
+#password-error {
+    top: 435px;
+}
+
+#password-confirm-error {
+    top: 530px;
+}
