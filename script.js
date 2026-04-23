@@ -4,7 +4,6 @@ const country = document.querySelector("#country");
 const postal = document.querySelector("#postal");
 const password = document.querySelector("#password");
 const passwordConfirm = document.querySelector("#password-confirm");
-const allInputs = document.querySelectorAll("input");
 
 const emailError = document.querySelector("#email-error");
 const countryError = document.querySelector("#country-error");
@@ -12,10 +11,57 @@ const postalError = document.querySelector("#postal-error");
 const passwordError = document.querySelector("#password-error");
 const passwordConfirmError = document.querySelector("#password-confirm-error");
 
+const highFive = document.querySelector("#high-five");
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log("high five!")
+    if (email.classList[0] === "valid" &&
+        country.classList[0] === "valid" &&
+        postal.classList[0] === "valid" &&
+        password.classList[0] === "valid" &&
+        passwordConfirm.classList[0] === "valid") {
+        highFive.innerText = "High Five!";
+        
+        email.value = "";
+        emailError.innerText = "";
+        email.classList = "";
+
+        country.value = "";
+        countryError.innerText = "";
+        country.classList = "";
+
+        postal.value = "";
+        postalError.innerText = "";
+        postal.classList = "";
+
+        password.value = "";
+        passwordError.innerText = "";
+        password.classList = "";
+
+        passwordConfirm.value = "";
+        passwordConfirmError.innerText = "";
+        passwordConfirm.classList = "";
+    };
 });
+
+form.addEventListener("reset", () => {
+    emailError.innerText = "";
+    email.classList = "";
+
+    countryError.innerText = "";
+    country.classList = "";
+
+    postalError.innerText = "";
+    postal.classList = "";
+
+    passwordError.innerText = "";
+    password.classList = "";
+
+    passwordConfirmError.innerText = "";
+    passwordConfirm.classList = "";
+
+    highFive.innerText = "";
+})
 
 email.addEventListener("input", () => {
     if (email.value.length === 0) {
