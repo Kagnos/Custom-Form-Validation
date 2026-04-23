@@ -41,21 +41,21 @@ label, input, button {
 }
 
 #email-error {
-    top: 150px;
+    top: 135px;
 }
 
 #country-error {
-    top: 245px;
+    top: 230px;
 }
 
 #postal-error {
-    top: 340px;
+    top: 325px;
 }
 
 #password-error {
-    top: 435px;
+    top: 420px;
 }
 
 #password-confirm-error {
-    top: 530px;
+    top: 515px;
 }

@@ -36,6 +36,41 @@ email.addEventListener("input", () => {
     };
 });
 
+country.addEventListener("input", () => {
+    if (country.value.length === 0) {
+        countryError.innerText = "";
+        country.classList = "";
+    } else if (country.value.length < 3) {
+        countryError.innerText = "Please enter a country at least 3 characters long!";
+        country.classList = "invalid"
+    } else if (country.value.length > 50) {
+        countryError.innerText = "Please enter a country no longer than 50 characters!";
+        country.classList = "invalid";
+    } else if (!(country.value.match(`^[A-Za-z ]+$`))) {
+        countryError.innerText = "Please enter a valid country!"
+        country.classList = "invalid";
+    } else {
+        countryError.innerText = "";
+        country.classList = "valid";
+    }
+});
+
+postal.addEventListener("input", () => {
+    if (postal.value.length === 0) {
+        postalError.innerText = "";
+        postal.classList = "";
+    } else if (postal.value.length !== 5) {
+        postalError.innerText = "Please enter a postal code 5 digits long!";
+        postal.classList = "invalid";
+    } else if (!(postal.value.match(/^\d+$/))) {
+        postalError.innerText = "Please enter a valid postal code!";
+        postal.classList = "invalid";
+    } else {
+        postalError.innerText = "";
+        postal.classList = "valid";
+    }
+})
+
 password.addEventListener("input", () => {
     if (password.value.length === 0) {
         passwordError.innerText = "";
@@ -59,7 +94,10 @@ password.addEventListener("input", () => {
 });
 
 passwordConfirm.addEventListener("input", () => {
-    if (passwordConfirm.value.length < 8) {
+    if (passwordConfirm.value.length === 0) {
+        passwordConfirmError.innerText = "";
+        passwordConfirm.classList = "";
+    } else if (passwordConfirm.value.length < 8) {
         passwordConfirmError.innerText = "Please enter a password at least 8 characters long!";
         passwordConfirm.classList = "invalid";
     } else if (password.value.length > 100) {
